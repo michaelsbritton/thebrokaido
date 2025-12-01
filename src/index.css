@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Hoefler Text";
+  src: local("Hoefler Text"),
+   url("./assets/fonts/Hoefler\ Text\ Regular.ttf") format("truetype");
+ }

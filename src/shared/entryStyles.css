@@ -1,0 +1,31 @@
+.Header {
+    background-color: #8224E3;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.MainArticle {
+    background-image: url('../assets/Parchment2.png');
+    height: 100%;
+    width: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: "F1776_Independence W00 Normal";
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 1.25px;
+}
+
+.ArticleBody {
+    width: 40%;
+    text-align: left;
+}
+
+.ArticleImage {
+    margin: 30px 0 10px 0;
+}

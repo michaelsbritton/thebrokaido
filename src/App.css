@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+.Header {
+  width: 100vw;
+  height: 25vh;
+  background-color: aqua;
+
+  color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 480px) and (orientation: portrait) {
+  .Header {
+    height: 20vh;
+    background-color: indigo;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App {
+  text-align: center;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.MainRoute:hover {
+  stroke: yellow
+}
+
+.OsakaRoute {
+
+}
+
+.Shukus:hover {
+  stroke: green
+}
+
+
+
+
+
+
+.mystery {
+  fill: yellow;
+}
+
+.TokaidoLine {
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+.TokaidoLine:hover {
+  fill: rgba(0, 0, 0, 1);
+  filter: drop-shadow(5px 5px 4px rgb(255 255 255 / 1));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.OtherBackground {
+
+}
+
+.OsakaBay4 {
+
+}
+
+.OsakaBay3 {
+
+}
+
+.OsakaBay2 {
+
+}
+
+.ArakawaRiverSouth {
+
+}
+
+.CountryBorder {
+  
+}
+.CountryBorder:hover {
+  fill: black;
+}
+
+.ToneRiverSouth {
+
+}
+
+.OsakaBay1 {
+
+}
+
+.ToneRiverNorth {
+
+}
+
+.TokyoEast1 {
+
+}
+
+.OshuEast1 {
+
+}
+
+.NorthOcean {
+
+}
+
+.Chiba {
+
+}
+
+.NorthEast {
+
+}
+
+.NorthWestOcean {
+
+}
+
+.SouthOcean {
+}
+
+.WestNorthWest {
+  
 }
