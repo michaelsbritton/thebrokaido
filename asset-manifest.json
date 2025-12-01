@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/thebrokaido/static/css/main.02c44e9c.css",
-    "main.js": "/thebrokaido/static/js/main.74d694a3.js",
+    "main.css": "/thebrokaido/static/css/main.cfd36410.css",
+    "main.js": "/thebrokaido/static/js/main.f41b5470.js",
     "static/js/787.d5c6a7f7.chunk.js": "/thebrokaido/static/js/787.d5c6a7f7.chunk.js",
     "static/media/Parchment2.png": "/thebrokaido/static/media/Parchment2.b1e0d547208684c2df24.png",
-    "static/media/LandingPageMapTrans.png": "/thebrokaido/static/media/LandingPageMapTrans.e15583e340c0159c6cc3.png",
-    "static/media/GoKaido_Ota.jpg": "/thebrokaido/static/media/GoKaido_Ota.3c3b61028cb40416a2a5.jpg",
+    "static/media/Bro-Kaido.png": "/thebrokaido/static/media/Bro-Kaido.3abeddd259f83f1b4f5b.png",
+    "static/media/Hoefler Text Regular.ttf": "/thebrokaido/static/media/Hoefler Text Regular.5af510cd2828296b93cb.ttf",
     "static/media/Aoi_Butsumaku4.jpg": "/thebrokaido/static/media/Aoi_Butsumaku4.b89df1bbab7adfc44d4e.jpg",
     "index.html": "/thebrokaido/index.html",
-    "main.02c44e9c.css.map": "/thebrokaido/static/css/main.02c44e9c.css.map",
-    "main.74d694a3.js.map": "/thebrokaido/static/js/main.74d694a3.js.map",
+    "main.cfd36410.css.map": "/thebrokaido/static/css/main.cfd36410.css.map",
+    "main.f41b5470.js.map": "/thebrokaido/static/js/main.f41b5470.js.map",
     "787.d5c6a7f7.chunk.js.map": "/thebrokaido/static/js/787.d5c6a7f7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.02c44e9c.css",
-    "static/js/main.74d694a3.js"
+    "static/css/main.cfd36410.css",
+    "static/js/main.f41b5470.js"
   ]
 }
