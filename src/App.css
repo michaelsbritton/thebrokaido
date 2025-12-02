@@ -1,21 +1,62 @@
+.App {
+  text-align: center;
+}
+
 .Header {
   width: 100vw;
   height: 25vh;
-  background-color: aqua;
-
-  color: white;
+ 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 @media (max-width: 480px) and (orientation: portrait) {
   .Header {
     height: 20vh;
-    background-color: indigo;
+    /* background-color: indigo; */
   }
 }
 
-.App {
-  text-align: center;
+
+.HeaderButtonContainer{
+  width: 60%;
+
+  background-color: #e0b56e;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
+
+.HeaderTitle {
+  font-family: "F1776_Independence W00 Normal";
+  font-size: 105px;
+  /* font-weight: 400;
+  letter-spacing: 1.25px; */
+
+}
+
+.HeaderNavigationButtons {
+  color: black;
+  border-color: #4a2364;
+  border-width: 1.75px;
+
+  font-family: "F1776_Independence W00 Normal";
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 1.25px;
+
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+
+.HeaderNavigationButtons:hover {
+  border-color: white;
+  border-width: 1.75px;
+  background-color: #4a2364;
+}
+
 
 .App-link {
   color: #61dafb;
