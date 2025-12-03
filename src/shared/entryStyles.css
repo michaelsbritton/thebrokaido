@@ -3,7 +3,7 @@
 .MainArticle {
     background-image: url('../assets/Parchment2.png');
     height: 100%;
-    width: auto;
+    /* width: auto; */
 
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@
 
 
 .ArticleTitle {
-    width: 40%;
+    width: 50%;
     font-size: 2.75em;
 }
 
@@ -45,4 +45,28 @@
 .ArticleBody {
     width: 40%;
     text-align: left;
+}
+
+
+/* RESPONSIVE DESIGN SECTION  */
+@media only screen and (max-width: 768px) {
+    .MainArticle {
+        width: 100%;
+    }
+    .ArticleTitle {
+        width: 80%;
+        font-size: 1.75em;
+
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    .ArticleImage {
+        width: 80%;
+    }
+    .ArticleBody {
+        width: 80%;
+        
+        font-size: 0.85em;
+        font-weight: 600;
+    }
 }

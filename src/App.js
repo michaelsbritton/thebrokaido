@@ -22,32 +22,41 @@ import NeedToKnowTerminology from './NeedToKnowTerminology';
 
 function App() {
 
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isLandscape = useMediaQuery({ query: '(orientation: landscape)' });
 
+  const [mobileHeaderMenu, setMobileHeaderMenu] = useState('closed');
 
-  // const handleButtonPress = (buttonCode) => {
-  //   if (buttonCode === 'NTKT') {
-  //     console.log('NEED TO KNOW TERMINOLOGY')
-  //     navigate('/Need-to-know-terminology');
-  //   }
-  //   else if (buttonCode === 'ROADS') {
-  //     console.log('ROADS!')
-  //   } 
-  //   else if (buttonCode === 'OTH') {
-  //     console.log('OTHER')
-  //   }
-  //   else if (buttonCode === 'TESTI') {
-  //     console.log('TESTIMONIALS')
-  //   }
-  //   else {
-  //     console.log('Something has gone wrong')
-  //   }
-  // }
-
+  const handleMenuClick = () => {
+    if (mobileHeaderMenu === 'closed') {
+      setMobileHeaderMenu('open')
+    }
+    else {
+      setMobileHeaderMenu('closed')
+    }
+  }
 
   return (
     <div className="App">
         <HashRouter>
-            <div className="Header">
+            { isMobile && !isLandscape ? 
+              <div className="MobileHeader">
+                  <div className="MobileTitle">
+                    The Brokaido
+                  </div>
+                  <div className="MobileMenu">
+                    <div id="nav-icon2" className={mobileHeaderMenu} onClick={handleMenuClick}>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+              </div>
+            :
+              <div className="Header">
               
                 <div style={{backgroundColor : "#e0b56e", width: "20%"}}>
                     <img src={require('./shared/BK_Logo1.png')} alt="BKHeader" height="100%" />
@@ -75,7 +84,9 @@ function App() {
 
                 <div style={{backgroundColor : "black", width: "20%"}}>B</div>
 
-            </div>
+              </div>
+            }
+            
         <div className="AppBody">
             <Routes>
                 <Route path='/' element={<AppIndex />} />

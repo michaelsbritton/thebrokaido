@@ -6,7 +6,7 @@ const AppIndex = () => {
     return(
         <div className="MainArticle">
             <div className="ArticleImage">
-                <img src={require('./shared/Bro-Kaido.png')} alt='Bro Kaido' width="60%"/>
+                <img src={require('./shared/Bro-Kaido.png')} alt='Bro Kaido' width="100%"/>
             </div>
             <div className="ArticleBody">
                 <p>Hello everyone, and welcome to the command centre for all things related to the Bro Kaido – Paul and Michael’s continued 
