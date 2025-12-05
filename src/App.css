@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.AppBody {
+  padding-top: 25vh;
+}
+
 .Header {
   width: 100vw;
   height: 25vh;
@@ -9,15 +13,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
 
-@media (max-width: 480px) and (orientation: portrait) {
-  .Header {
-    height: 20vh;
-    /* background-color: indigo; */
-  }
+  position: fixed;
 }
-
 
 .HeaderButtonContainer{
   width: 60%;
@@ -31,9 +29,6 @@
 .HeaderTitle {
   font-family: "F1776_Independence W00 Normal";
   font-size: 105px;
-  /* font-weight: 400;
-  letter-spacing: 1.25px; */
-
 }
 
 .HeaderNavigationButtons {
@@ -60,6 +55,10 @@
 
 .MobileHeader {
   height: 15vh;
+  width: 100vw;
+  
+  position: fixed;
+  /* z-index: 700; */
 
   background-color: #e0b56e;
 
@@ -75,27 +74,20 @@
 }
 
 .MobileTitle {
-  width: 80%;
+  width: 75%;
   
   font-size: 48px;
-
-  /* margin-right: 20px; */
 }
 
 .MobileMenu {
-  width: 30%;
-
-  /* for future hamburger bars */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 25%;
 }
 
-
+/* ---------- Mobile Menu Hamburger Button ----------  */
 #nav-icon2 {
-  width: 60px;
-  height: 45px;
+  width: 50px;
+  height: 35px;
+
   position: relative;
   margin: 50px auto;
   -webkit-transform: rotate(0deg);
@@ -109,15 +101,12 @@
   cursor: pointer;
 }
 
-#nav-icon2 {
-}
-
 #nav-icon2 span {
   display: block;
   position: absolute;
-  height: 9px;
+  height: 5px;
   width: 50%;
-  background: #d3531a;
+  background: #4a2364;
   opacity: 1;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -144,11 +133,11 @@
 }
 
 #nav-icon2 span:nth-child(3), #nav-icon2 span:nth-child(4) {
-  top: 18px;
+  top: 15px;
 }
 
 #nav-icon2 span:nth-child(5), #nav-icon2 span:nth-child(6) {
-  top: 36px;
+  top: 30px;
 }
 
 #nav-icon2.open span:nth-child(1),#nav-icon2.open span:nth-child(6) {
@@ -187,17 +176,163 @@
 
 #nav-icon2.open span:nth-child(5) {
   left: 5px;
-  top: 29px;
+  top: 22px;
 }
 
 #nav-icon2.open span:nth-child(6) {
   left: calc(50% - 5px);
-  top: 29px;
+  top: 22px;
+}
+
+/* ---------- End Mobile Menu Hamburger Button ----------  */
+
+/* ---------- Mobile Menu Drawer ----------  */
+.MobileHeaderLinks {
+    width: 100vw;
+    height: 85vh;  
+    
+    background-color: #4a2364;
+
+    text-align: left;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+    position: fixed;
+    top: 15vh;
+    left: -100%;
+    /* left: 0; */
+    overflow: auto;
+
+    transition: 850ms;
+    z-index: 500;
+}
+
+.MobileHeaderLinks.active {
+    overflow: auto;
+
+    left: 0;
+    transition: 750ms;
+
+}
+
+.MobileLinkText {
+    width: 375px;
+
+    text-align: right;
+
+    padding: 0px 20px;
+    margin: 15px 0px;
+}
+
+.MobileHeaderLinks ul {
+    list-style-type: none;
+    font-size: 1.60rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+
+    padding: 0;
+    margin: 0;
+}
+
+.MobileHeaderLinks a {
+    color: white;
+    text-decoration: none;
+}
+.MobileHeaderLinks a:hover {
+    color: darkgray;
+}
+.MobileHeaderLinks a:visited {
+    
+}
+
+/* ---------- End Mobile Menu Drawer ----------  */
+
+
+/* ---------- Desktop Roads Menu Drawer ----------  */
+.DesktopRoadsHeaderLinks {
+    width: 100vw;
+    height: 75vh;  
+    
+    background-color: #4a2364;
+
+    text-align: left;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+    position: fixed;
+    top: 25vh;
+    left: -100%;
+    /* left: 0; */
+    overflow: auto;
+
+    transition: 850ms;
+    z-index: 5;
+}
+
+.DesktopRoadsHeaderLinks.active {
+    overflow: auto;
+
+    left: 0;
+    transition: 750ms;
+
+}
+
+.DesktopLinkText {
+    width: 550px;
+
+    text-align: left;
+
+    padding: 0px 10px;
+    margin: 13px 0px;
+}
+
+.DesktopRoadsHeaderLinks ul {
+    list-style-type: none;
+    font-size: 1.60rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+
+    padding: 0;
+    margin: 0;
+}
+
+.DesktopRoadsHeaderLinks a {
+    color: white;
+    text-decoration: none;
+}
+.DesktopRoadsHeaderLinks a:hover {
+    color: darkgray;
+}
+.DesktopRoadsHeaderLinks a:visited {
+    
+}
+
+/* ---------- End Desktop Roads Menu Drawer ----------  */
+
+
+/* RESPONSIVE DESIGN SECTION  */
+@media only screen and (max-width: 768px) {
+    .AppBody {
+        padding-top: 15vh;
+    }
 }
 
 
 
 
+/* ---------- For eventual makeover and trial of SVG design ---------- */
 .App-link {
   color: #61dafb;
 }

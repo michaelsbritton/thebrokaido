@@ -26,13 +26,115 @@ function App() {
   const isLandscape = useMediaQuery({ query: '(orientation: landscape)' });
 
   const [mobileHeaderMenu, setMobileHeaderMenu] = useState('closed');
+  const [mobileIsVisible, setMobileIsVisible] = useState(false);
+
+  const [desktopHeaderMenu, setDesktopHeaderMenu] = useState('closed');
+  const [desktopIsVisible, setDesktopIsVisible] = useState(false);
+
+  const sidebarData = [
+    {
+      name: 'Home',
+      path: '/',
+      icon: '',
+      cName: 'MobileLinkText',
+      dName: 'DesktopLinkText',
+    },
+    {
+      name: 'Need to Know Terminology',
+      path: '/Need-to-know-terminology',
+      icon: '',
+      cName: 'MobileLinkText',
+      dName: 'DesktopLinkText',
+    },
+    {
+      name: 'The Nakasendo',
+      path: '/Nakasendo',
+      icon: '',
+      cName: 'MobileLinkText',
+      dName: 'DesktopLinkText',
+    },
+    {
+      name: 'The Nikko Kaido',
+      path: '/Nikkokaido',
+      icon: '',
+      cName: 'MobileLinkText',
+      dName: 'DesktopLinkText',
+    },
+    {
+      name: 'The Koshu Kaido',
+      path: '/Koshukaido',
+      icon: '',
+      cName: 'MobileLinkText',
+      dName: 'DesktopLinkText',
+    },
+    {
+      name: 'The Oshu Kaido',
+      path: '/Oshukaido',
+      icon: '',
+      cName: 'MobileLinkText',
+      dName: 'DesktopLinkText',
+    },
+    {
+      name: 'The Tokaido',
+      path: '/Tokaido',
+      icon: '',
+      cName: 'MobileLinkText',
+      dName: 'DesktopLinkText',
+    },
+    {
+      name: 'Oku no Hosomichi',
+      path: '/Okunohosomichi',
+      icon: '',
+      cName: 'MobileLinkText',
+      dName: 'DesktopLinkText',
+    },
+    {
+      name: 'Walk with Us - Testimonials',
+      path: '/Testimonials',
+      icon: '',
+      cName: 'MobileLinkText',
+      dName: 'DesktopLinkText',
+    },
+  ];
+
+
+  const scrollTop = () => {
+    window.scrollTo(0, 0)
+  }
 
   const handleMenuClick = () => {
     if (mobileHeaderMenu === 'closed') {
-      setMobileHeaderMenu('open')
+      setMobileHeaderMenu('open');
+      toggleMobileIsVisible();
+      scrollTop();
     }
     else {
-      setMobileHeaderMenu('closed')
+      setMobileHeaderMenu('closed');
+      toggleMobileIsVisible();
+      scrollTop();
+    }
+  }
+
+  const toggleMobileIsVisible = () => {
+    let updateMobileIsVisible = !mobileIsVisible;
+    setMobileIsVisible(updateMobileIsVisible);
+  }
+
+  const toggleDesktopIsVisible = () => {
+    let updateDesktopIsVisible = !desktopIsVisible;
+    setDesktopIsVisible(updateDesktopIsVisible);
+  }
+
+  const handleRoadsButtonClick = () => {
+    if (desktopHeaderMenu === 'closed') {
+      setDesktopHeaderMenu('open');
+      toggleDesktopIsVisible();
+      scrollTop();
+    }
+    else {
+      setDesktopHeaderMenu('closed');
+      toggleDesktopIsVisible();
+      scrollTop();
     }
   }
 
@@ -54,6 +156,22 @@ function App() {
                       <span></span>
                     </div>
                   </div>
+                  {/* This is the mobile sidebar! */}
+                  <div className={mobileIsVisible ? "MobileHeaderLinks active": "MobileHeaderLinks"}>
+                    <nav>
+                      <ul onClick={handleMenuClick}>
+                          {sidebarData.map((item, idx) => (
+                              <li key={idx} className={item.cName}>
+                                  <Link to={item.path}>
+                                      <span style={{ marginRight: "9px" }}>{item.icon}</span>
+                                      <span>{item.name}</span>
+                                  </Link>
+                              </li>
+                          ))}
+                      </ul>
+                    </nav>
+                  </div>
+                  {/* End Mobile Sidebar */}
               </div>
             :
               <div className="Header">
@@ -68,18 +186,34 @@ function App() {
                     </div>
                     <div>
                         <Link to='/Need-to-know-terminology'>
-                            <Button className="HeaderNavigationButtons" variant="outline-primary" > Need to Know Terminology </Button>
+                            <Button className="HeaderNavigationButtons" variant="outline-primary" onClick={scrollTop}> Need to Know Terminology </Button>
                         </Link>
-                        <Link to='/Nakasendo'>
-                            <Button className="HeaderNavigationButtons" variant="outline-primary"> Roads </Button>
-                        </Link>
+                        <span>
+                            <Button className="HeaderNavigationButtons" variant="outline-primary" onClick={toggleDesktopIsVisible}> Roads </Button>
+                        </span>
                         <Link>
                             <Button className="HeaderNavigationButtons" variant="outline-primary"> Other </Button>
                         </Link>
                         <Link to='/Testimonials'>
-                            <Button className="HeaderNavigationButtons" variant="outline-primary"> Walk with Us - Testimonials </Button>
+                            <Button className="HeaderNavigationButtons" variant="outline-primary" onClick={scrollTop}> Walk with Us - Testimonials </Button>
                         </Link>
                     </div>
+                    {/* Desktop Menu 1 */}
+                    <div className={desktopIsVisible ? "DesktopRoadsHeaderLinks active": "DesktopRoadsHeaderLinks"}>
+                      <nav>
+                        <ul onClick={handleRoadsButtonClick}>
+                            {sidebarData.map((item, idx) => (
+                                <li key={idx} className={item.dName}>
+                                    <Link to={item.path}>
+                                        <span style={{ marginRight: "9px" }}>{item.icon}</span>
+                                        <span>{item.name}</span>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                      </nav>
+                    </div>
+                    {/* End Desktop Menu 1 */}
                 </div>
 
                 <div style={{backgroundColor : "black", width: "20%"}}>B</div>
