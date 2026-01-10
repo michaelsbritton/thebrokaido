@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/thebrokaido/static/css/main.6895da6f.css",
-    "main.js": "/thebrokaido/static/js/main.2762ae53.js",
+    "main.js": "/thebrokaido/static/js/main.594881e3.js",
     "static/js/787.d5c6a7f7.chunk.js": "/thebrokaido/static/js/787.d5c6a7f7.chunk.js",
     "static/media/izakaya.png": "/thebrokaido/static/media/izakaya.05155f584d186ed30c95.png",
     "static/media/toiya.png": "/thebrokaido/static/media/toiya.2c282ade9f5d2f18ee85.png",
@@ -111,11 +111,11 @@
     "static/media/Ponder.jpg": "/thebrokaido/static/media/Ponder.7f5a858470ac0e1b548a.jpg",
     "index.html": "/thebrokaido/index.html",
     "main.6895da6f.css.map": "/thebrokaido/static/css/main.6895da6f.css.map",
-    "main.2762ae53.js.map": "/thebrokaido/static/js/main.2762ae53.js.map",
+    "main.594881e3.js.map": "/thebrokaido/static/js/main.594881e3.js.map",
     "787.d5c6a7f7.chunk.js.map": "/thebrokaido/static/js/787.d5c6a7f7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6895da6f.css",
-    "static/js/main.2762ae53.js"
+    "static/js/main.594881e3.js"
   ]
 }
